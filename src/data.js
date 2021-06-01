@@ -80,6 +80,28 @@ export const quizData = {
           href:
             'https://www.computer.org/publications/tech-news/trends/programming-languages-you-should-learn-in-2020',
         },
+        {
+          text: 'JavaScript was created by Brendan Eich in?',
+          answers: {
+            a: '1994',
+            b: '1995',
+            c: '1998',
+            d: '1992',
+          },
+          correct: 'b',
+          selected: null,
+          links: [
+            {
+              text: 'Javascript History',
+              href:
+                'https://medium.com/@_benaston/lesson-1a-the-history-of-javascript-8c1ce3bffb17#:~:text=JavaScript%20was%20created%20by%20Brendan,his%20time%20at%20Netscape%20Communications.',
+            },
+            {
+              text: 'Brendan Eich',
+              href: 'https://en.wikipedia.org/wiki/Brendan_Eich',
+            },
+          ],
+        },
       ],
     },
   ],
