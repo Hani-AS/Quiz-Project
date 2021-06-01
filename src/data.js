@@ -59,5 +59,28 @@ export const quizData = {
       ],
     },
     // Add more questions here
+    {
+      text: 'The most popular programing language in 2020 is ?',
+      answers: {
+        a: 'javascript',
+        b: 'python',
+        c: 'java',
+        d: 'C++',
+      },
+      correct: 'b',
+      selected: null,
+      links: [
+        {
+          text: 'According to Northeastern University',
+          href:
+            'https://www.northeastern.edu/graduate/blog/most-popular-programming-languages/',
+        },
+        {
+          text: 'computer.com',
+          href:
+            'https://www.computer.org/publications/tech-news/trends/programming-languages-you-should-learn-in-2020',
+        },
+      ],
+    },
   ],
 };
