@@ -27,10 +27,9 @@ const setupLandingPage = () => {
   Object.assign(startBtn, {
     className: 'start-btn',
     innerText: 'Start Quiz',
-    startBtn: addEventListener('click', startQuiz),
   });
-
-  mainContainer.appendChild(imgContainer);
+  startBtn.addEventListener('click', startQuiz),
+    mainContainer.appendChild(imgContainer);
   mainContainer.appendChild(contentContainer);
   imgContainer.appendChild(img);
   contentContainer.appendChild(heading);
