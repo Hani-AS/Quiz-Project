@@ -12,6 +12,7 @@ const createQuestionElement = (question, questionNumber) => {
 
   const answerContainer = createDOMElement('ol');
   answerContainer.setAttribute('type', 'a');
+  addClass(answerContainer, 'questions_list');
   addClass(answerContainer, 'hover');
   for (const answerKey in question.answers) {
     const answer = createAnswerElement(answerKey, question.answers[answerKey]);

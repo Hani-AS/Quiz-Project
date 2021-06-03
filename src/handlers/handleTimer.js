@@ -12,10 +12,10 @@ const handleTimer = (startTimer) => {
     if(startTimer === true){
         const timerContainer = getDOMElement(TIMER_ID);
         let counter = 15;
-        timerContainer.innerText = `Time left: ${counter} seconds`;
+        timerContainer.innerText = counter;
         timerInterval = setInterval(function(){
             counter--;
-            timerContainer.innerText = `Time left: ${counter} seconds`;
+            timerContainer.innerText = counter;
             
             if (counter == 0){
                 clearInterval(timerInterval);

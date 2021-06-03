@@ -16,29 +16,7 @@
   overflow: auto;
 } */
 
-li {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-}
 
-.hover li {
-  cursor: pointer;
-}
-.hover li:hover {
-  background-color: orange;
-}
-
-.selected {
-  background-color: orange;
-}
-
-.wrong {
-  background-color: red;
-}
-.correct {
-  background-color: green;
-}
 
 /********************* Start landing-page ***************************/
 
@@ -172,6 +150,7 @@ li {
   font-family: 'Monoton', cursive;
   font-size: 20px;
   cursor: pointer;
+  outline-color: transparent;
 }
 .btn:hover {
   opacity: 0.7;
@@ -189,4 +168,45 @@ li {
   color: rgb(34, 148, 49);
   background: rgb(214, 214, 214);
 }
+.questions_info_bar{
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+}
+.questions_info_bar-score, .questions_info_bar-timer{
+  flex: 1;
+}
+#timer{
+  color:red;
+}
+.questions_list{
+  border: 1px solid #ccc;
+  padding: 30px;
+}
+.questions_list li {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.hover li {
+  cursor: pointer;
+}
+.hover li:hover {
+  background-color: orange;
+  color: #5f6266;
+}
+
+.selected {
+  background-color: orange;
+  color: #5f6266;
+}
+
+.wrong {
+  background-color: red;
+}
+.correct {
+  background-color: green;
+}
+
 /**************************** end questions section ******************************/
