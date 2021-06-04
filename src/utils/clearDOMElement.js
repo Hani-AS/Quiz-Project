@@ -3,7 +3,7 @@
 /**
  * This function removes all the html inside the given element
  */
-const clearDOMElement = (DOMElement) => {
+const clearDOMElement =   (DOMElement) => {
     DOMElement.innerHTML = '';
 }
 

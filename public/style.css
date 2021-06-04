@@ -1,3 +1,8 @@
+html, body{
+  padding: 0;
+  margin: 0;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
@@ -11,11 +16,7 @@
   width: 60%;
 }
 
-/* .scrollable {
-  height: auto;
-  max-height: 80vh;
-  overflow: auto;
-} */
+
 
 
 
@@ -277,3 +278,98 @@
 }
 
 /**************************** end questions section ******************************/
+
+
+
+/* start results page */
+.result-page{
+  background-image: url(../images/background.png);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+
+.result-page img{
+  width: 60%;
+  height: 80%;
+  position: absolute;
+  z-index: 2;
+  opacity: .7;
+  margin: auto;
+  transition: 3s;
+}
+
+.result-page .hidden{
+  /* opacity: 0; */
+  z-index: -1;
+}
+
+
+.total-score{
+  font-family: 'Monoton', cursive;
+  color: #abacad;
+  font-size: 30px;
+  text-align: center;
+  margin: 40px;
+}
+
+.correct-answer, .no-answer, .wrong-answer {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #1215eb;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.correct-answer {
+  background-color: rgba(18, 243, 18, 0.5);
+}
+
+.no-answer {
+  background-color: rgb(212, 196, 44, 0.5);
+}
+
+.wrong-answer {
+  background-color: rgb(240, 10, 10, 0.5);
+}
+
+.correct-answer h2, .no-answer h2, .wrong-answer h2 {
+  font-family: 'Monoton', cursive;
+  
+}
+
+.correct-answer p, .no-answer p, .wrong-answer p {
+  font-family: 'Monoton', cursive;
+  font-size: 21px;
+  margin: 5px;
+}
+
+.result-page button{
+  font-family: 'Monoton', cursive;
+  font-size: 36px;
+  margin-top: 20px;
+  color: #e2e2e2;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  background-color: rgba(219, 83, 59, 1);
+}
+
+.result-page button:hover {
+  box-shadow: 0 0 20px 10px rgba(230, 30, 10, 0.6);
+  animation: burn 1000ms ease-out forwards;
+  cursor: pointer;
+}
+
+
+
+
+
+/* end results page */

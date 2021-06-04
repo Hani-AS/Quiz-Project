@@ -4,6 +4,7 @@ import showCurrentQuestion from './showCurrentQuestion.js';
 import { quizData } from '../data.js';
 import handleTimer from './handleTimer.js';
 import { addClass, removeClass } from '../utils/manageClass.js';
+import handleHiddenResultImage from './handleHiddenResultImage.js';
 
 
 const handleNextQuestion = (buttonElement) => {
@@ -20,6 +21,8 @@ const handleNextQuestion = (buttonElement) => {
     handleTimer(true);
   } else {
     showResults();
+   setTimeout( handleHiddenResultImage,2000);
+
   }
   
   console.log(quizData.selectedQuestionsIndex);
