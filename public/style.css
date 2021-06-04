@@ -170,6 +170,7 @@
   color: rgb(34, 148, 49);
   background: rgb(214, 214, 214);
 }
+
 .questions_info_bar{
   display: flex;
   align-items: center;
@@ -265,4 +266,14 @@
 .source_links a{
   color: #abacad;
 }
+.skip_question{
+  position: absolute;
+  bottom: 5px;
+  right: 20%;
+}
+.skip_question-btn{
+  font-size: 13px;
+  font-family: sans-serif;
+}
+
 /**************************** end questions section ******************************/

@@ -4,6 +4,7 @@ import createDOMElement from "../utils/createDOMElement.js";
 import createNextQuestionButtonElement from './createNextQuestionButtonElement.js'
 import {TIMER_ID, SCORE_ID, QUESTION_CONTAINER_ID, QUIZ_CONTAINER_ID} from '../constants.js';
 import { addClass } from "../utils/manageClass.js";
+import skipThisQuestion from "../listeners/skipThisQuestion.js";
 
 
 
@@ -35,6 +36,19 @@ const setupQuizHTML = () =>{
 
   const nextQuestionButton = createNextQuestionButtonElement();
   quizContainer.appendChild(nextQuestionButton);
+
+  const skipQuestion = createDOMElement('div');
+  addClass(skipQuestion, 'skip_question');
+  const skipText = createDOMElement('span');
+  skipText.textContent = "You have an option to skip only one question: ";
+  const skipButton = createDOMElement('button');
+  skipButton.innerText = "Skip This Question";
+  addClass(skipButton, 'btn');
+  addClass(skipButton, 'skip_question-btn');
+  skipButton.addEventListener('click', skipThisQuestion);
+  skipQuestion.appendChild(skipText).appendChild(skipButton);
+  quizContainer.appendChild(skipQuestion);
+  
   return quizContainer;
 }
 
