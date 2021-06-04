@@ -1,6 +1,4 @@
 'use strict';
-// import handleAnswerReport from '../handlers/handleAnswerReport.js';
-// import handlePassOrFailedGIF from '../handlers/handlePassOrFailedGIF.js';
 import createDOMElement from '../utils/createDOMElement.js';
 
 //start mans
@@ -11,7 +9,7 @@ import { addClass, removeClass } from '../utils/manageClass.js';
 
 // end mans
 
-  const createResultsDOM = (data) => {
+const createResultsDOM = (data) => {
   const resultContainer = createDOMElement('div');
   const totalScoreElement = createDOMElement('p');
   totalScoreElement.innerText = `You scored (${data.correctAnswerScore}) of (${data.numberOfQuestions})`;

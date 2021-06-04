@@ -2,7 +2,7 @@
 
 import setupQuizHTML from '../views/setupQuizHTML.js';
 import getDOMElement from '../utils/getDOMElement.js';
-// import showCurrentQuestion from './showCurrentQuestion.js';
+//import showCurrentQuestion from './showCurrentQuestion.js';
 import showScore from './showScore.js';
 import clearDOMElement from '../utils/clearDOMElement.js';
 // import handleTimer from './handleTimer.js';

@@ -4,7 +4,7 @@ import showCurrentQuestion from './showCurrentQuestion.js';
 import { quizData } from '../data.js';
 import handleTimer from './handleTimer.js';
 import { addClass, removeClass } from '../utils/manageClass.js';
-// import handleHiddenResultImage from './handleHiddenResultImage.js';
+import handleHiddenResultImage from './handleHiddenResultImage.js';
 
 const handleNextQuestion = (buttonElement) => {
   buttonElement.innerText = 'Check The Answer';

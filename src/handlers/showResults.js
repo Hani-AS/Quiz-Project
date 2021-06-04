@@ -5,7 +5,7 @@ import getDOMElement from '../utils/getDOMElement.js';
 import createResultsDOM from '../views/createResultsDOM.js';
 import clearDOMElement from '../utils/clearDOMElement.js';
 import createResetButton from '../views/createResetButton.js';
-// import handleHiddenResultImage from './handleHiddenResultImage.js';
+import handleHiddenResultImage from './handleHiddenResultImage.js';
 
 const showResults = () => {
   const userInterface = getDOMElement('user-interface');
