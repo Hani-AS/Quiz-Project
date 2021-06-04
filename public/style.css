@@ -2,12 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 .centered {
-  position: fixed;
+  /* position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   text-align: center;
   color: #abacad;
+  width: 60%;
 }
 
 /* .scrollable {
@@ -39,6 +40,7 @@
   border-top: 3px solid rgba(219, 83, 59, 1);
   display: flex;
   flex-direction: column;
+  align-items: center;
   animation: moveInTop 1s ease-out 0.5s;
   animation-fill-mode: both;
 }
@@ -168,6 +170,7 @@
   color: rgb(34, 148, 49);
   background: rgb(214, 214, 214);
 }
+
 .questions_info_bar{
   display: flex;
   align-items: center;
@@ -183,10 +186,17 @@
   border: 1px solid #ccc;
   padding: 30px;
 }
+.questions_list-wrong{
+  box-shadow: 0 0 25px red;
+}
+.questions_list-correct{
+  box-shadow: 0 0 25px green;
+}
 .questions_list li {
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
+  opacity: 0;
 }
 
 .hover li {
@@ -207,6 +217,63 @@
 }
 .correct {
   background-color: green;
+}
+
+/*** start of Animation ***/
+.questions_list li:first-child {
+  animation: answers 0.4s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+
+.questions_list li:nth-of-type(2) {
+  animation: answers 0.4s ease-in-out forwards;
+  animation-delay: 0.8s;
+}
+
+.questions_list li:nth-of-type(3) {
+  animation: answers 0.4s ease-in-out forwards;
+  animation-delay: 1.2s;
+}
+
+.questions_list li:last-child {
+  animation: answers 0.4s ease-in-out forwards;
+  animation-delay: 1.6s;
+}
+
+@keyframes answers {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*** end of Animation ***/
+
+
+.source_links{
+  position: absolute;
+  bottom: -20px;
+  transition: all .5s linear;
+}
+.source_links a{
+  color: #abacad;
+}
+.skip_question{
+  position: absolute;
+  bottom: 5px;
+  right: 20%;
+}
+.skip_question-btn{
+  font-size: 13px;
+  font-family: sans-serif;
 }
 
 /**************************** end questions section ******************************/

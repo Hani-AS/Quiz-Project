@@ -7,6 +7,8 @@ import showScore from './showScore.js';
 
 const handleCheckTheAnswer = (buttonElement) => {
   handleTimer(false);
+  document.querySelector('.source_links').style.bottom = "5px";
+
   if (quizData.selectedQuestionsIndex.length < quizData.numberOfQuestions) {
     buttonElement.innerText = 'Next Question';
     buttonElement.dataset.status = 'nextQuestion';
@@ -28,6 +30,7 @@ const handleCheckTheAnswer = (buttonElement) => {
     quizData.questions[quizData.currentQuestionIndex].selected = selectedAnswer;
     removeClass(selectedElement, 'selected');
     if (selectedAnswer === correctAnswer) {
+      addClass(selectedElement.parentNode, "questions_list-correct");
       quizData.correctAnswerScore++;
       showScore();
     }else{
@@ -41,7 +44,7 @@ const handleCheckTheAnswer = (buttonElement) => {
     `[data-answer='${correctAnswer}']`
   );
   addClass(correctAnswerElement, 'correct');
-
+  addClass(correctAnswerElement.parentElement, "questions_list-wrong");
   removeClass(document.querySelector('.hover'), 'hover');
 };
 

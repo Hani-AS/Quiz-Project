@@ -1,10 +1,11 @@
 'use strict';
 
 import handleInitializer from '../handlers/handleInitializer.js';
+import handleLeavingTab from '../handlers/handleLeavingTab.js';
 
-const startQuiz = (event) => {
-  const buttonElement = event.currentTarget;
-  handleInitializer(buttonElement);
+const startQuiz = () => {
+  handleInitializer();
+  window.onblur = handleLeavingTab;
 };
 
 export default startQuiz;

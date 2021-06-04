@@ -10,17 +10,21 @@ const createQuestionElement = (question, questionNumber) => {
   title.innerText = `Q${questionNumber}: ${question.text}`;
   container.appendChild(title);
 
-  const answerContainer = createDOMElement('ol');
-  answerContainer.setAttribute('type', 'a');
-  addClass(answerContainer, 'questions_list');
-  addClass(answerContainer, 'hover');
+  const answersContainer = createDOMElement('ol');
+  answersContainer.setAttribute('type', 'a');
+  addClass(answersContainer, 'questions_list');
+  addClass(answersContainer, 'hover');
   for (const answerKey in question.answers) {
     const answer = createAnswerElement(answerKey, question.answers[answerKey]);
-    answerContainer.appendChild(answer);
+    answersContainer.appendChild(answer);
   }
 
-  container.appendChild(answerContainer);
-
+  container.appendChild(answersContainer);
+  const linksContainer = createDOMElement('div');
+  addClass(linksContainer, 'source_links');
+  const formattedLinks = question.links.map( link => `<a href="${link.href}" target="_blank">${link.text}</a>`);
+  linksContainer.innerHTML = `Sources: ${formattedLinks.join(', ')}`;
+  container.appendChild(linksContainer); 
   return container;
 };
 
