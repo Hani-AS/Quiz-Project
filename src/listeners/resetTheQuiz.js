@@ -7,6 +7,7 @@ const resetTheQuiz = () => {
   quizData.currentQuestionIndex = 0;
   quizData.correctAnswerScore = 0;
   quizData.selectedQuestionsIndex = [];
+  quizData.skippedQuestions = [];
   initializeLandingPage();
 };
 
