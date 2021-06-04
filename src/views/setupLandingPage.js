@@ -5,7 +5,7 @@ import startQuiz from '../listeners/startQuiz.js';
 import createDOMElement from '../utils/createDOMElement.js';
 import { addClass } from '../utils/manageClass.js';
 
-const setupLandingPage = () => {
+const setupLandingPage = (questionsNO, secondsNO) => {
   const mainContainer = createDOMElement('div');
   mainContainer.className = 'main-container';
   const imgContainer = createDOMElement('div');
@@ -44,9 +44,9 @@ const setupLandingPage = () => {
   questionsDropdownTitle.innerText = 'Select Number Of Questions: '
   const questionsDropdown = createDOMElement('select', {id: QUESTIONS_DROPDOWN});
   questionsDropdown.innerHTML = `
-  <option value="5">5 Questions</option>
-  <option value="7" selected>7 Questions</option>
-  <option value="10">10 Questions</option>
+  <option value="5" ${(questionsNO==5)?"selected":""}>5 Questions</option>
+  <option value="7" ${(questionsNO==7)?"selected":""}>7 Questions</option>
+  <option value="10" ${(questionsNO==10)?"selected":""}>10 Questions</option>
   `;
   numberOFQuestionsContainer.appendChild(questionsDropdownTitle);
   numberOFQuestionsContainer.appendChild(questionsDropdown);
@@ -59,9 +59,9 @@ const setupLandingPage = () => {
   secondsDropdownTitle.innerText = 'Select Seconds: '
   const secondsDropdown = createDOMElement('select', {id: SECONDS_DROPDOWN});
   secondsDropdown.innerHTML = `
-  <option value="10">10 Seconds</option>
-  <option value="15" selected>15 Seconds</option>
-  <option value="20">20 Seconds</option>
+  <option value="10" ${(secondsNO==10)?"selected":""}>10 Seconds</option>
+  <option value="15" ${(secondsNO==15)?"selected":""}>15 Seconds</option>
+  <option value="20" ${(secondsNO==20)?"selected":""}>20 Seconds</option>
   `;
   numberOFSecondsContainer.appendChild(secondsDropdownTitle);
   numberOFSecondsContainer.appendChild(secondsDropdown);
