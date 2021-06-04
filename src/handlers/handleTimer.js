@@ -1,6 +1,7 @@
 'use strict';
 
 import { NEXT_QUESTION_BUTTON_ID, TIMER_ID } from "../constants.js";
+import { quizData } from "../data.js";
 import getDOMElement from "../utils/getDOMElement.js";
 import handleCheckTheAnswer from "./handleCheckTheAnswer.js";
 
@@ -11,7 +12,7 @@ const handleTimer = (startTimer) => {
     clearInterval(timerInterval);
     if(startTimer === true){
         const timerContainer = getDOMElement(TIMER_ID);
-        let counter = 15;
+        let counter = quizData.numberOfSeconds;
         timerContainer.innerText = counter;
         timerInterval = setInterval(function(){
             counter--;
