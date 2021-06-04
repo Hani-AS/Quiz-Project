@@ -4,16 +4,14 @@ import showCurrentQuestion from './showCurrentQuestion.js';
 import { quizData } from '../data.js';
 import handleTimer from './handleTimer.js';
 import { addClass, removeClass } from '../utils/manageClass.js';
-import handleHiddenResultImage from './handleHiddenResultImage.js';
-
+// import handleHiddenResultImage from './handleHiddenResultImage.js';
 
 const handleNextQuestion = (buttonElement) => {
   buttonElement.innerText = 'Check The Answer';
   buttonElement.dataset.status = 'checkAnswer';
-  removeClass(buttonElement, 'btn-next')
-  addClass(buttonElement, 'btn-check')
-  
-  // console.log(quizData.selectedQuestionsIndex.length);
+  removeClass(buttonElement, 'btn-next');
+  addClass(buttonElement, 'btn-check');
+
   if (quizData.selectedQuestionsIndex.length < quizData.numberOfQuestions) {
     quizData.currentQuestionIndex = generateQuestionIndex();
     quizData.selectedQuestionsIndex.push(quizData.currentQuestionIndex);
@@ -21,23 +19,18 @@ const handleNextQuestion = (buttonElement) => {
     handleTimer(true);
   } else {
     showResults();
-   setTimeout( handleHiddenResultImage,2000);
-
+    setTimeout(handleHiddenResultImage, 2000);
   }
-  
-  console.log(quizData.selectedQuestionsIndex);
-
 };
 
-function generateQuestionIndex(){
+function generateQuestionIndex() {
   const index = Math.floor(Math.random() * quizData.questions.length);
   // console.log(index);
-  if( quizData.selectedQuestionsIndex.includes(index) ){
+  if (quizData.selectedQuestionsIndex.includes(index)) {
     // console.log(index);
     return generateQuestionIndex();
   }
-    return index;
-  
+  return index;
 }
 
 export default handleNextQuestion;
