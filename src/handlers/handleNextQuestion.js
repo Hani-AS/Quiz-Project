@@ -29,7 +29,7 @@ const handleNextQuestion = (buttonElement) => {
 function generateQuestionIndex(){
   const index = Math.floor(Math.random() * quizData.questions.length);
   // console.log(index);
-  if( quizData.selectedQuestionsIndex.includes(index) ){
+  if( quizData.selectedQuestionsIndex.includes(index) || quizData.skippedQuestions.includes(index)){
     // console.log(index);
     return generateQuestionIndex();
   }
