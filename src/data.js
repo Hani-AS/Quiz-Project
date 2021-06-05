@@ -26,6 +26,7 @@ export const quizData = {
         a: 'constant, let, variable',
         b: 'var, const, let, function',
         c: 'var, let, const',
+        d: 'variable, function, let',
       },
       correct: 'c',
       selected: null,
@@ -255,7 +256,8 @@ export const quizData = {
         },
         {
           text: 'MDN',
-          href: 'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables',
         },
       ],
     },
@@ -272,7 +274,8 @@ export const quizData = {
       links: [
         {
           text: 'MDN',
-          href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean',
         },
         {
           text: 'w3schools',
@@ -293,7 +296,8 @@ export const quizData = {
       links: [
         {
           text: 'MDN',
-          href: 'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events',
         },
         {
           text: 'w3schools',
@@ -314,7 +318,8 @@ export const quizData = {
       links: [
         {
           text: 'MDN',
-          href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max',
         },
         {
           text: 'w3schools',
@@ -335,7 +340,8 @@ export const quizData = {
       links: [
         {
           text: 'MDN',
-          href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round',
+          href:
+            'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round',
         },
         {
           text: 'w3schools',

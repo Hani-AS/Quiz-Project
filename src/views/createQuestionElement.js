@@ -22,9 +22,11 @@ const createQuestionElement = (question, questionNumber) => {
   container.appendChild(answersContainer);
   const linksContainer = createDOMElement('div');
   addClass(linksContainer, 'source_links');
-  const formattedLinks = question.links.map( link => `<a href="${link.href}" target="_blank">${link.text}</a>`);
+  const formattedLinks = question.links.map(
+    (link) => `<a href="${link.href}" target="_blank">${link.text}</a>`
+  );
   linksContainer.innerHTML = `Sources: ${formattedLinks.join(', ')}`;
-  container.appendChild(linksContainer); 
+  container.appendChild(linksContainer);
   return container;
 };
 
