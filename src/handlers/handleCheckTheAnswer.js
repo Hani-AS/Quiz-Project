@@ -1,42 +1,49 @@
 'use strict';
 
+import { CORRECT_INCORRECT_ICON } from '../constants.js';
 import { quizData } from '../data.js';
+import getDOMElement from '../utils/getDOMElement.js';
 import { addClass, removeClass } from '../utils/manageClass.js';
 import handleTimer from './handleTimer.js';
 import showScore from './showScore.js';
 
 const handleCheckTheAnswer = (buttonElement) => {
   handleTimer(false);
-  document.querySelector('.source_links').style.bottom = "5px";
+  document
+    .querySelector('.source_links')
+    .setAttribute('style', 'bottom: -65px; visibility: visible;');
+    const correctIncorrectIcon = getDOMElement(CORRECT_INCORRECT_ICON);
+    addClass(correctIncorrectIcon, 'correct_incorrect_icon');
 
   if (quizData.selectedQuestionsIndex.length < quizData.numberOfQuestions) {
     buttonElement.innerText = 'Next Question';
     buttonElement.dataset.status = 'nextQuestion';
-    removeClass(buttonElement, '.btn-check')
-    addClass(buttonElement, 'btn-next')
+    removeClass(buttonElement, '.btn-check');
+    addClass(buttonElement, 'btn-next');
   } else {
     buttonElement.innerText = 'Show results';
     buttonElement.dataset.status = 'showResults';
-    removeClass(buttonElement, '.btn-check')
-    addClass(buttonElement, 'btn-result')
+    removeClass(buttonElement, '.btn-check');
+    addClass(buttonElement, 'btn-result');
   }
 
   const correctAnswer =
     quizData.questions[quizData.currentQuestionIndex].correct;
   const selectedElement = document.querySelector('.selected');
 
-  if(selectedElement){
+  if (selectedElement) {
     const selectedAnswer = selectedElement.dataset.answer;
     quizData.questions[quizData.currentQuestionIndex].selected = selectedAnswer;
     removeClass(selectedElement, 'selected');
     if (selectedAnswer === correctAnswer) {
-      addClass(selectedElement.parentNode, "questions_list-correct");
+      addClass(selectedElement.parentNode, 'questions_list-correct');
       quizData.correctAnswerScore++;
       showScore();
-    }else{
+      addClass(correctIncorrectIcon, 'correct_icon');
+    } else {
       addClass(selectedElement, 'wrong');
     }
-  }else{
+  } else {
     quizData.questions[quizData.currentQuestionIndex].selected = null;
   }
 
@@ -44,7 +51,7 @@ const handleCheckTheAnswer = (buttonElement) => {
     `[data-answer='${correctAnswer}']`
   );
   addClass(correctAnswerElement, 'correct');
-  addClass(correctAnswerElement.parentElement, "questions_list-wrong");
+  addClass(correctAnswerElement.parentElement, 'questions_list-wrong');
   removeClass(document.querySelector('.hover'), 'hover');
 };
 
