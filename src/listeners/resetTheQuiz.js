@@ -14,7 +14,6 @@ const resetTheQuiz = () => {
   const userInterfaceContainer = getDOMElement('user-interface');
   removeClass(userInterfaceContainer, "results-container");
   addClass(userInterfaceContainer, "centered");
-  addClass(userInterfaceContainer, "scrollable");
   
   initializeLandingPage();
 };

@@ -178,7 +178,7 @@
   background-repeat: no-repeat;
   background-position: 0 -100px;
   position: absolute;
-  top:10px;
+  top:80px;
   left: calc( 50% - 50px);
   animation: correct_wrong 1s;
 }
