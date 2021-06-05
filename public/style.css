@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@1&display=swap');
 
 .centered {
-  /* position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   text-align: center;
   color: #abacad;
-  width: 60%;
+  width: 600px;
 }
 
 /* .scrollable {
@@ -16,8 +13,6 @@
   max-height: 80vh;
   overflow: auto;
 } */
-
-
 
 /********************* Start landing-page ***************************/
 
@@ -27,6 +22,7 @@
   align-items: center;
   justify-content: center;
   background-image: url(../images/background.png);
+  background-size: cover;
   height: 100vh;
 }
 
@@ -150,12 +146,14 @@
 
 .btn {
   font-family: 'Monoton', cursive;
-  font-size: 20px;
+  font-size: 25px;
   cursor: pointer;
   outline-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .btn:hover {
-  opacity: 0.7;
+  opacity: 0.8;
   /* margin-bottom: -1px; */
 }
 .btn-check {
@@ -163,34 +161,67 @@
   background-color: rgba(219, 83, 59, 1);
 }
 .btn-next {
-  color: rgba(0, 0, 0, 1);
-  background: rgb(214, 214, 214);
+  color: #dcdcdc;
+  background: rgb(42 41 41);
 }
 .btn-result {
-  color: rgb(34, 148, 49);
-  background: rgb(214, 214, 214);
+  color: rgb(0, 0, 0);
+  background-color: rgba(219, 83, 59, 1);
+}
+.btn-result:hover {
+  box-shadow: 0 0 20px 10px rgba(230, 30, 10, 0.6);
+  animation: burn 1000ms ease-out forwards;
+  cursor: pointer;
 }
 
-.questions_info_bar{
+.questions_info_bar {
   display: flex;
   align-items: center;
   align-content: space-between;
 }
-.questions_info_bar-score, .questions_info_bar-timer{
+.questions_info_bar-score,
+.questions_info_bar-timer {
   flex: 1;
 }
-#timer{
-  color:red;
+#timer {
+  color: red;
 }
-.questions_list{
+
+#total-score {
+  text-shadow: 4px 5px 8px rgb(0 0 0);
+}
+.questions_info_bar-timer p {
+  text-shadow: 4px 5px 8px rgb(0 0 0);
+}
+#question-container h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-bottom: hidden;
+  height: 100px;
+  width: 600px;
+  box-sizing: border-box;
+  padding: 0px 10px;
+  margin: 0px;
+  font-family: 'Changa One', cursive;
+  background: rgb(42 41 41);
+}
+.questions_list {
+  /* background-color: rgba(219, 83, 59, 1); */
   border: 1px solid #ccc;
   padding: 30px;
+  margin-top: 0px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.questions_list-wrong{
-  box-shadow: 0 0 25px red;
+.questions_list-wrong {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(255, 0, 0, 0.788) 0px 10px 10px;
 }
-.questions_list-correct{
-  box-shadow: 0 0 25px green;
+.questions_list-correct {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 201, 17, 0.788) 0px 10px 10px;
 }
 .questions_list li {
   padding: 10px;
@@ -232,7 +263,7 @@
 
 .questions_list li:nth-of-type(3) {
   animation: answers 0.3s ease-in-out forwards;
-  animation-delay: .9s;
+  animation-delay: 0.9s;
 }
 
 .questions_list li:last-child {
@@ -257,21 +288,22 @@
 
 /*** end of Animation ***/
 
-
-.source_links{
-  position: absolute;
-  bottom: -20px;
-  transition: all .5s linear;
+.source_links {
+  position: relative;
+  bottom: -30px;
+  visibility: hidden;
+  transition: all 0.5s linear;
 }
-.source_links a{
+
+.source_links a {
   color: #abacad;
 }
-.skip_question{
+.skip_question {
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   right: 20%;
 }
-.skip_question-btn{
+.skip_question-btn {
   font-size: 13px;
   font-family: sans-serif;
 }
