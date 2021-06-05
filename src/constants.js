@@ -13,3 +13,5 @@ export const QUIZ_CONTAINER_ID = 'quiz-container';
 export const NEXT_QUESTION_BUTTON_ID = 'next-question-button';
 export const SCORE_ID = "total-score";
 export const TIMER_ID = "timer";
+export const QUESTIONS_DROPDOWN = 'questions-dropdown';
+export const SECONDS_DROPDOWN = 'seconds-dropdown';
