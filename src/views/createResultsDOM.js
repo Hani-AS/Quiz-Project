@@ -7,7 +7,7 @@ const createResultsDOM = (data) => {
   const resultContainer = createDOMElement('div');
   
   const totalScoreElement = createDOMElement('p');
-  totalScoreElement.innerText = `Your score was ${data.correctAnswerScore} out of ${data.numberOfQuestions}`;
+  totalScoreElement.innerText = `You scored (${data.correctAnswerScore}) out of (${data.numberOfQuestions})`;
   resultContainer.appendChild(totalScoreElement);
 
   //start
