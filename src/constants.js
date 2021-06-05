@@ -15,3 +15,4 @@ export const SCORE_ID = "total-score";
 export const TIMER_ID = "timer";
 export const QUESTIONS_DROPDOWN = 'questions-dropdown';
 export const SECONDS_DROPDOWN = 'seconds-dropdown';
+export const CORRECT_INCORRECT_ICON = 'correct-incorrect-icon';
