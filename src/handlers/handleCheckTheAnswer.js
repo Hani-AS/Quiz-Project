@@ -1,6 +1,8 @@
 'use strict';
 
+import { CORRECT_INCORRECT_ICON } from '../constants.js';
 import { quizData } from '../data.js';
+import getDOMElement from '../utils/getDOMElement.js';
 import { addClass, removeClass } from '../utils/manageClass.js';
 import handleTimer from './handleTimer.js';
 import showScore from './showScore.js';
@@ -10,6 +12,8 @@ const handleCheckTheAnswer = (buttonElement) => {
   document
     .querySelector('.source_links')
     .setAttribute('style', 'bottom: -65px; visibility: visible;');
+    const correctIncorrectIcon = getDOMElement(CORRECT_INCORRECT_ICON);
+    addClass(correctIncorrectIcon, 'correct_incorrect_icon');
 
   if (quizData.selectedQuestionsIndex.length < quizData.numberOfQuestions) {
     buttonElement.innerText = 'Next Question';
@@ -35,6 +39,7 @@ const handleCheckTheAnswer = (buttonElement) => {
       addClass(selectedElement.parentNode, 'questions_list-correct');
       quizData.correctAnswerScore++;
       showScore();
+      addClass(correctIncorrectIcon, 'correct_icon');
     } else {
       addClass(selectedElement, 'wrong');
     }

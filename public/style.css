@@ -174,6 +174,34 @@
   cursor: pointer;
 }
 
+.correct_incorrect_icon{
+  width: 100px;
+  height: 100px;
+  background-image: url(../images/correct_incorrect.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -100px;
+  position: absolute;
+  top:10px;
+  left: calc( 50% - 50px);
+  animation: correct_wrong 1s;
+}
+.correct_icon{
+  background-position: 0 0;
+}
+@keyframes correct_wrong {
+  0% {
+    transform: translateY(-10px);
+  }
+  50%{
+    transform: translateY(20px);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+
 .questions_info_bar {
   display: flex;
   align-items: center;
@@ -246,10 +274,33 @@
 .wrong {
   background-color: red;
 }
+.wrong::after{
+  content: "";
+  width: 20px;
+  height: 18px;
+  background-size: revert;
+  background-repeat: no-repeat;
+  background: url(../images/check_cross.png);
+  z-index: 2;
+  position: absolute;
+  right: -24px;
+  background-position-x: -30px;
+}
 .correct {
   background-color: green;
+  position: relative;
 }
-
+.correct::after{
+  content: "";
+  width: 22px;
+  height: 18px;
+  background-size: revert;
+  background-repeat: no-repeat;
+  background: url(../images/check_cross.png);
+  z-index: 2;
+  position: absolute;
+  right: -26px;
+}
 /*** start of Animation ***/
 .questions_list li:first-child {
   animation: answers 0.3s ease-in-out forwards;

@@ -4,6 +4,8 @@ import showCurrentQuestion from './showCurrentQuestion.js';
 import { quizData } from '../data.js';
 import handleTimer from './handleTimer.js';
 import { addClass, removeClass } from '../utils/manageClass.js';
+import getDOMElement from '../utils/getDOMElement.js';
+import { CORRECT_INCORRECT_ICON } from '../constants.js';
 
 
 const handleNextQuestion = (buttonElement) => {
@@ -11,7 +13,9 @@ const handleNextQuestion = (buttonElement) => {
   buttonElement.dataset.status = 'checkAnswer';
   removeClass(buttonElement, 'btn-next')
   addClass(buttonElement, 'btn-check')
-  
+  const correctIncorrectIcon = getDOMElement(CORRECT_INCORRECT_ICON);
+  removeClass(correctIncorrectIcon, 'correct_incorrect_icon');
+  removeClass(correctIncorrectIcon, 'correct_icon');
   // console.log(quizData.selectedQuestionsIndex.length);
   if (quizData.selectedQuestionsIndex.length < quizData.numberOfQuestions) {
     quizData.currentQuestionIndex = generateQuestionIndex();
