@@ -8,11 +8,7 @@
   width: 600px;
 }
 
-/* .scrollable {
-  height: auto;
-  max-height: 80vh;
-  overflow: auto;
-} */
+
 
 /********************* Start landing-page ***************************/
 
@@ -359,4 +355,137 @@
   font-family: sans-serif;
 }
 
+
 /**************************** end questions section ******************************/
+
+/**************************** start results section ******************************/
+
+ .result-page{ 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  
+} 
+
+.results-container{
+ display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+
+.result_img_container{
+  position:absolute;
+  display: flex; 
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  padding: 10px;
+}
+
+
+.result-page img{
+  width: 100%;
+  z-index: 2;
+  opacity: .7;
+  transition: 3s;
+}
+
+.result-page .hidden{
+  opacity: 0;
+  z-index: -1;
+}
+
+.show-grid{
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  margin: auto;
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 15px;
+  background-color: #2295f300;
+  padding: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+
+.total-score{
+  font-family: 'Monoton', cursive;
+  color: #abacad;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+ 
+}
+
+.correct-answer, .no-answer, .wrong-answer {
+  padding: 10px;
+  border: 2px solid rgba(219, 83, 59, 1);;
+  border-radius: 5px;
+  width: calc(98% - 10px );
+  text-align: center;
+}
+
+.correct-answer {
+  background-color: rgba(18, 243, 18, 0.4);
+}
+
+.no-answer {
+  background-color: rgb(212, 196, 44, 0.2);
+}
+
+.wrong-answer {
+  background-color: rgb(240, 10, 10, 0.4);
+}
+
+.correct-answer h2, .no-answer h2, .wrong-answer h2 {
+  font-family: 'Monoton', cursive;
+  padding: 5px;
+  margin: 0;
+  font-size: 25px;
+  
+}
+
+.correct-answer p, .no-answer p, .wrong-answer p {
+  font-family: 'Monoton', cursive;
+  font-size: 15px;
+  padding: 5px;
+  margin: 0;
+}
+
+.reset-button{
+  font-family: 'Monoton', cursive;
+  font-size: 25px;
+  margin: 20px, 100, 10px;
+  color: #e2e2e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  background-color: rgba(219, 83, 59, 1);
+}
+
+.result-page button:hover {
+  box-shadow: 0 0 20px 10px rgba(230, 30, 10, 0.6);
+  animation: burn 1000ms ease-out forwards;
+  cursor: pointer;
+}
+
+
+
+
+
+/**************************** end results section ******************************/
