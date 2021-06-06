@@ -9,7 +9,7 @@ import getDOMElement from '../utils/getDOMElement.js';
 const startQuiz = () => {
   quizData.numberOfQuestions = getDOMElement(QUESTIONS_DROPDOWN).value;
   quizData.numberOfSeconds = getDOMElement(SECONDS_DROPDOWN).value;
-  // console.log(quizData.numberOfQuestions);
+  console.log(quizData.numberOfQuestions);
   handleInitializer();
   window.onblur = handleLeavingTab;
 };
