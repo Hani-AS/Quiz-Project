@@ -220,7 +220,7 @@ select:hover {
   background-repeat: no-repeat;
   background-position: 0 -100px;
   position: absolute;
-  top: 80px;
+  top: 10%;
   left: calc(50% - 50px);
   animation: correct_wrong 1s;
 }
@@ -266,7 +266,7 @@ select:hover {
   border: 3px solid rgb(0, 0, 0);
   border-bottom: hidden;
   height: 100px;
-  width: 600px;
+  /* width: 600px; */
   box-sizing: border-box;
   padding: 0px 10px;
   margin: 0px;
@@ -538,3 +538,16 @@ select:hover {
 
 
 /**************************** end results section ******************************/
+
+
+
+
+
+@media only screen and (max-width: 640px){
+	.centered{
+		width: 90%;
+	}
+  .correct_incorrect_icon{
+    top:5%;
+  }
+}
