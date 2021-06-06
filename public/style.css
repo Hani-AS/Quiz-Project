@@ -446,8 +446,7 @@ select:hover {
   margin: auto;
   overflow: scroll;
   display: grid;
-  /* grid-template-columns: auto auto; */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: auto auto;
   grid-gap: 15px;
   background-color: #2295f300;
   padding: 10px;
