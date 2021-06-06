@@ -7,7 +7,7 @@ import handleCheckTheAnswer from './handleCheckTheAnswer.js';
 const handleLeavingTab = () => {
   const nextButton = getDOMElement(NEXT_QUESTION_BUTTON_ID);
   if (nextButton && nextButton.dataset.status === 'checkAnswer') {
-    alert('Sorry! You lost this question because you left to another page.');
+    alert('Sorry! If you have not selected yet, You lost this question because you left to another page.');
     handleCheckTheAnswer(nextButton);
   }
 };

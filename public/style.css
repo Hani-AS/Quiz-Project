@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&display=swap');
 
 .centered {
   text-align: center;
@@ -456,20 +457,22 @@ select:hover {
   width: 0px;
 }
 
-.total-score {
-  font-family: 'Monoton', cursive;
+
+
+.total-score{
+  font-family:'Bodoni Moda', serif;
   color: #abacad;
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.correct-answer,
-.no-answer,
-.wrong-answer {
+
+
+.correct-answer, .no-answer, .wrong-answer {
   padding: 10px;
   border: 2px solid rgba(219, 83, 59, 1);
   border-radius: 5px;
@@ -489,23 +492,21 @@ select:hover {
   background-color: rgb(240, 10, 10, 0.4);
 }
 
-.correct-answer h2,
-.no-answer h2,
-.wrong-answer h2 {
+
+.correct-answer h2, .no-answer h2, .wrong-answer h2 {
   font-family: 'Changa One', cursive;
   padding: 5px;
   margin: 0;
-  font-size: 25px;
+  font-size: 20px;
+  color: #080d14;
 }
 
-.correct-answer p,
-.no-answer p,
-.wrong-answer p {
+.correct-answer p, .no-answer p, .wrong-answer p {
   font-family: 'Changa One', cursive;
   font-size: 15px;
   padding: 5px;
   margin: 0;
-  color: #5f6266;
+  color: rgb(2, 23, 37);
 }
 
 .reset-button {
@@ -525,5 +526,15 @@ select:hover {
   animation: burn 1000ms ease-out forwards;
   cursor: pointer;
 }
+
+
+@media screen and (max-width: 600px){
+  .show-grid{
+    
+    grid-template-columns: auto;
+    
+  }
+}
+
 
 /**************************** end results section ******************************/
