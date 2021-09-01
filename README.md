@@ -1,5 +1,5 @@
 
-# [Deployed page to Quiz](https://hani-as.github.io/Quiz-Project/)
+### [Live demo](https://hani-as.github.io/Quiz-Project/)
 
 # Getting Started
 
